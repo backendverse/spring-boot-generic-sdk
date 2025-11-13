@@ -14,10 +14,12 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.UUID;
 
+import static com.common.sdk.constants.ApplicationConstant.CORRELATION_ID;
+
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Component
 public class CorrelationIdFilter extends OncePerRequestFilter {
-    private static final String CORRELATION_ID = "x-correlation-id";
+
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
