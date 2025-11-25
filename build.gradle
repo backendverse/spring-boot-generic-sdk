@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.common.sdk'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2'
 description = 'Common SDK'
 
 java {
@@ -35,6 +35,18 @@ jar {
 }
 
 publishing {
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri(getProperty("github.host"))
+            credentials {
+                username = getProperty("github.username")
+                password = getProperty("github.password")
+            }
+        }
+    }
+
     publications {
         maven(MavenPublication) {
             from components.java  // Java components ko publish karo
