@@ -7,6 +7,7 @@ import lombok.Getter;
 public enum APIResponseCode implements ResponseCode {
 
     SUCCESS(200, "Success"),
+    BAD_REQUEST(400, "Bad Request"),
     METHOD_NOT_ALLOWED(405, "Method Not Allowed"),
     UNSUPPORTED_MEDIA_TYPE(415, "Unsupported Media Type"),
     VALIDATION_ERROR(422, "Validation Failed"),

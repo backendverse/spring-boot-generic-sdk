@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.common.sdk'
-version = '0.0.2'
+version = '0.0.3'
 description = 'Common SDK'
 
 java {
